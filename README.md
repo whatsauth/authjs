@@ -24,7 +24,7 @@ This library using [englishextra/qrjs2](https://github.com/englishextra/qrjs2) t
    </form>
    ```
 
-   Declare the const variable before calling qrjs2 and whatsauth library.
+   Option 1 : Declare the const variable before calling qrjs2 and whatsauth library.
 
    ```html
     <script>
@@ -42,6 +42,14 @@ This library using [englishextra/qrjs2](https://github.com/englishextra/qrjs2) t
     </script>
     <script src="assets/authjs/qrjs2.js"></script>
     <script src="assets/authjs/whatsauth.js"></script>
+   ```
+
+   Option 2 : Just modif and use config.js
+
+   ```html
+   <script src="assets/authjs/config.js"></script>
+   <script src="assets/authjs/qrjs2.js"></script>
+   <script src="assets/authjs/whatsauth.js"></script>
    ```
 
 4. Edit CORS Config, add your apps domain in your whatsauth websocket server.
