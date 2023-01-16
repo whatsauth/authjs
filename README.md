@@ -1,4 +1,4 @@
-# AuthJS : Web Socket Authentication using Vanilla JS for WhatsAuth 
+# WAuthJS : Web Socket Authentication using Vanilla JS for WhatsAuth 
 
 Use this js for Two-Factor Authentication (2FA) WhatsAuth Application Login.
 This library using [englishextra/qrjs2](https://github.com/englishextra/qrjs2) to generate QR.
