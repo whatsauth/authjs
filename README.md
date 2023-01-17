@@ -1,11 +1,11 @@
-# WAuthJS : Web Socket Authentication using Vanilla JS for WhatsAuth 
+# WAuthJS : Web Socket Authentication using Vanilla JS for WhatsAuth
 
 Use this js for Two-Factor Authentication (2FA) WhatsAuth Application Login.
 This library using [englishextra/qrjs2](https://github.com/englishextra/qrjs2) to generate QR.
 
 ## How to use
 
-1. Copy whatsauth.js and qrjs2.js to your asset public static folder. For example : assets/authjs folder.
+1. Copy wauth.js to your asset public static folder. For example : assets/wauthjs folder.
 2. add this div and p tag into your login section page in your login html page. For examle : inside login div/section before form
 
     ```html
@@ -24,7 +24,7 @@ This library using [englishextra/qrjs2](https://github.com/englishextra/qrjs2) t
    </form>
    ```
 
-   Edit const declaration in whatsauth.js according to id in login form.
+   Edit const declaration in wauthjs.js according to id in login form.
 
    ```js
     const using_click = true;        // true = id_button.click()    |   false = id_form.submit()
@@ -43,7 +43,7 @@ This library using [englishextra/qrjs2](https://github.com/englishextra/qrjs2) t
    Add whatsauth.js script in the end your body login html page, for example : before </body> tag.
 
    ```html
-   <script src="assets/authjs/whatsauth.js"></script>
+   <script src="assets/wauthjs/wauthjs.js"></script>
    ```
 
 4. Edit CORS Config, add your apps domain in your whatsauth websocket server.
