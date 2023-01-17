@@ -13,7 +13,7 @@ This library using [englishextra/qrjs2](https://github.com/englishextra/qrjs2) t
     <p id="whatsauthcounter">hi</p>
     ```
 
-3. Also add this script in the end your body login html page, for example : before </body> tag. Please modif const variable based on your html form id.
+3. Check your login form html tag. Please add id in form, input, and button tag.
    For Example, we have form login :
 
    ```html
@@ -24,10 +24,9 @@ This library using [englishextra/qrjs2](https://github.com/englishextra/qrjs2) t
    </form>
    ```
 
-   Option 1 : Declare the const variable before calling qrjs2 and whatsauth library.
+   Edit const declaration in whatsauth.js according to id in login form.
 
-   ```html
-    <script>
+   ```js
     const using_click = true;        // true = id_button.click()    |   false = id_form.submit()
     const id_user = 'user_name';     //id of username input text. For example : <input type="text" name="id_siap" id="user_name">
     const id_pass = 'user_pass';     //id of password input. For Example : <input type="password" name="password" id="user_pass">
@@ -39,16 +38,11 @@ This library using [englishextra/qrjs2](https://github.com/englishextra/qrjs2) t
 
     const interval = 30;     // qrcode change interval in second
     const maxqrwait = 90;    // maximum qrcode display/ time out in second, usually = 3 x interval.
-    </script>
-    <script src="assets/authjs/qrjs2.js"></script>
-    <script src="assets/authjs/whatsauth.js"></script>
    ```
 
-   Option 2 : Just modif and use config.js
+   Add whatsauth.js script in the end your body login html page, for example : before </body> tag.
 
    ```html
-   <script src="assets/authjs/config.js"></script>
-   <script src="assets/authjs/qrjs2.js"></script>
    <script src="assets/authjs/whatsauth.js"></script>
    ```
 
