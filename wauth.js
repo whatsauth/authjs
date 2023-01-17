@@ -119,7 +119,7 @@ function qrController() {
   if (rto < maxqrwait){
     setTimeout('qrController()',1000);
   }else{
-	document.getElementById(id_qr).innerHTML = refreshbutton;
+    document.getElementById(id_qr).innerHTML = refreshbutton;
     document.getElementById(id_counter).innerHTML = "Refresh Your Browser to get QR";
   }
 }
