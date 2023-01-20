@@ -186,6 +186,13 @@ function setCookieWithExpireDay(cname, cvalue, exdays) {
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
+function setCookieWithExpireHour(cname, cvalue, exhour) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exhour * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
 function setCookieWithExpireSecond(cname, cvalue, exsecs) {
   const d = new Date();
   d.setTime(d.getTime() + (exsecs * 1000));
@@ -230,7 +237,7 @@ function catcher(result){
   if (result.length > 2){
     jsonres = JSON.parse(result);
     console.log("catcher runner");
-    setCookieWithExpireSecond("user_name",jsonres.user_name,interval);
+    setCookieWithExpireHour("login",jsonres.login,2);
     fillformLogin(jsonres);
     submitLogin();
   }
