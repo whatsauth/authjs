@@ -47,3 +47,14 @@ This library using [englishextra/qrjs2](https://github.com/englishextra/qrjs2) t
    ```
 
 4. Edit CORS Config, add your apps domain in your whatsauth websocket server.
+
+## Magic Link
+
+Yo migth use custom UUID just use
+
+```html
+https://host/urlapi?uuid=customuuid 
+
+```
+
+in URL
