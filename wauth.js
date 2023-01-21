@@ -122,9 +122,10 @@ function generateUUID(){
   if (urlgetparams.uuid ==null){
     a=crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+apphost;
   }else{
-    a=urlgetparams.uuid
+    if (mobile){
+      a=urlgetparams.uuid
+    }
   }
-  
   return a;
 }
 
