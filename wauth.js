@@ -107,7 +107,7 @@ function sendMessagetoWebSocket(msg){
 }
 
 function generatePassword() {
-  var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_.";
   var passwordLength = 17;
   var password = "";
   for (var i = 0; i <= passwordLength; i++) {
@@ -119,11 +119,16 @@ function generatePassword() {
 
 function generateUUID(){
   let wuid;
-  if (urlgetparams.uuid ==null){
-    wuid=crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+apphost;
+  if (urlgetparams.uuid == null){
+    uuid=crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+apphost;
+    if (mobile){
+      wuid = "m."+uuid;
+    }else{
+      wuid = "d."+uuid;
+    }
   }else{
     if (mobile){
-      wuid=urlgetparams.uuid
+      wuid=urlgetparams.uuid;
     }
   }
   return wuid;
