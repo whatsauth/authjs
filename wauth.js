@@ -158,19 +158,15 @@ function setCounterandQR(){
 }
 
 function makeQrCode(text){
-    qr = QRCode.generateSVG(text, {
-        ecclevel: "M",
-        fillcolor: "#FFFFFF",
-        textcolor: "#000000",
-        margin: 4,
-        modulesize: 8
-    });
-    var svg = document.getElementById(id_qr);
-	if (mobile) {
-		svg.innerHTML=whatsappbutton;
-	}else{
-		svg.replaceChild(qr,svg.firstElementChild);
-	}
+  qr = QRCode.generateSVG(text, {
+      ecclevel: "M",
+      fillcolor: "#FFFFFF",
+      textcolor: "#000000",
+      margin: 4,
+      modulesize: 8
+  });
+  var svg = document.getElementById(id_qr);
+	svg.replaceChild(qr,svg.firstElementChild);
 }
 
 function showQR(text){
