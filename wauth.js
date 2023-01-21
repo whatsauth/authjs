@@ -121,8 +121,9 @@ function generatePassword() {
 }
 
 function generateUUID(){
+  let a;
   if (urlgetparams.uuid ==null){
-    let a=crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+apphost;
+    a=crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+apphost;
   }else{
     a=urlgetparams.uuid
   }
