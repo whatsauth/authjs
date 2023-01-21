@@ -118,15 +118,15 @@ function generatePassword() {
 }
 
 function generateUUID(){
-  let a;
+  let wuid;
   if (urlgetparams.uuid ==null){
-    a=crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+apphost;
+    wuid=crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+generatePassword()+"."+crypto.randomUUID()+"."+apphost;
   }else{
     if (mobile){
-      a=urlgetparams.uuid
+      wuid=urlgetparams.uuid
     }
   }
-  return a;
+  return wuid;
 }
 
 function qrController() {
