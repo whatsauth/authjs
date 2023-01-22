@@ -27,7 +27,7 @@ const id_qr = "whatsauthqr";
 const id_counter = "whatsauthcounter";
 // /*end of config in html login page*/
 
-const apphost = btoa(document.location.host);
+const apphost = btoa(document.location.host+document.location.pathname);
 let jsonres;
 let rto =0;
 let countdown=0;
