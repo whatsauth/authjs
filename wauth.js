@@ -22,6 +22,8 @@ const auth_ws = 'd3NzOi8vYXV0aC51bGJpLmFjLmlkL3dzL3doYXRzYXV0aC9xcg==';
 const keyword = 'aHR0cHM6Ly93YS5tZS82MjgxMTIwMDAyNzk/dGV4dD13aDR0NWF1dGgw';
 const interval = 30;
 const maxqrwait = 90;
+const tokencookiename = "login";
+const tokencookiehourslifetime = 2;
 const id_qr = "whatsauthqr";
 const id_counter = "whatsauthcounter";
 
@@ -51,8 +53,8 @@ function svgqrjsonclick(){
 }
 
 function main() {
+  deleteCookie(tokencookiename);
   qrController();
-
 }
 
 
@@ -138,8 +140,8 @@ function qrController() {
   if (rto < maxqrwait){
     setTimeout('qrController()',1000);
   }else{
-	var svg = document.getElementById(id_qr);
-	svg.innerHTML=refreshbutton;
+	  var svg = document.getElementById(id_qr);
+	  svg.innerHTML=refreshbutton;
     document.getElementById(id_counter).innerHTML = "Refresh Your Browser to get QR";
   }
 }
@@ -235,7 +237,7 @@ function catcher(result){
   if (result.length > 2){
     jsonres = JSON.parse(result);
     console.log("catcher runner");
-    setCookieWithExpireHour("login",jsonres.login,2);
+    setCookieWithExpireHour(tokencookiename,jsonres.login,tokencookiehourslifetime);
     fillformLogin(jsonres);
     submitLogin();
   }
