@@ -21,21 +21,23 @@
             <p class="font-bold text-center mb-4" id="logs">log</p>
         </div>
     </div>
-    
 
-
-    <input type="hidden" id="postId" name="postId" value="34657" />
     <form id="loginform" method="post" action="#">
         <input type="hidden" name="user_name" id="user_name" value="">
         <input type="hidden" name="user_pass" id="user_pass" value="">
         <input type="hidden" name="remember_me" value="y">
         <input type="submit" id="login" name="login" value="Login" class="button">
-        </form>
+        <button onclick="testSubmit()" id="login" name="login" value="Login" class="button">Click me</button>
+    </form>
 
 
-        <script>
-            document.getElementById("useracclog").innerHTML = navigator.userAgent;
-       </script>
+    <script>
+        document.getElementById("useracclog").innerHTML = navigator.userAgent;
+
+        function testSubmit() {
+            document.getElementById("logs").innerHTML = getCookie(tokencookiename);
+        }
+    </script>
 <script src="wauth.js"></script>
 </body>
 </html>
