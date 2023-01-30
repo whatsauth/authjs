@@ -59,3 +59,4 @@ In this section explain how wauth.js works, this section need if you want to be 
    * suffic : url information of current access as Agent URL.
 3. In mobile version, you might click QR(no need to scan) to login to generate magic link
 4. Magic Link use PASETO token passing into agent URL as uuid parameter. For example of magic link : <https://Agent/URL/?uuid=PASETOKEN>
+5. There is Cookies in paseto format with Login as name. Use it to authentication with backend
