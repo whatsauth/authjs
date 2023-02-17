@@ -237,6 +237,7 @@ function catcher(result){
   if (result.length > 2){
     jsonres = JSON.parse(result);
     console.log("catcher runner");
+    console.log(jsonres);
     setCookieWithExpireHour(tokencookiename,jsonres.login,tokencookiehourslifetime);
     fillformLogin(jsonres);
     submitLogin();
