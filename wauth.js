@@ -127,10 +127,8 @@ function generateUUID(){
     }else{
       wuid = "d."+uuid;
     }
-  }else{
-    if (mobile){
-      wuid=urlgetparams.uuid;
-    }
+  }else{/*magic link*/
+    wuid=urlgetparams.uuid;
   }
   return wuid;
 }
